@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!--Объявление формата документа -->
+<html>
+    <head> <!--Техническая информация о документе -->
+        <meta charset="UTF-8"> <!--Определяем кодировку символовдокумента --> 
+        <title>Моя форма</title> <!--Задаем заголовок документа -->              
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <!--Подключаем внешнюю таблицу стилей -->       
+       <script src="src/script.js"></script> <!--Подключаем сценарии-->
+    </head>
+    <body> <!--Основная часть документа -->
+     <header>      
+        <form name="forma">
+
+            <section>
+                <div class="block-left">
+                    Прізвище:<br>
+                    Ім'я:<br>
+                    По батькові:<br>
+                </div>
+    
+                <div class="block-right">
+                    <input type="text" id="fam" onkeyup="this.value = this.value.replace(/[^\D]/g,'');"><br>
+                    <input type="text" id="name" onkeyup="this.value = this.value.replace(/[^\D]/g,'');"><br>
+                    <input type="text" id="otch" onkeyup="this.value = this.value.replace(/[^\D]/g,'');"><br>                
+                </div>
+            </section>            
+                       
+            <div class="otstp">Дата народження:<br></div>            
+
+            <section>
+                <div class="block-left">
+                    Число:<br>
+                    Місяць:<br>
+                    Рік:<br>
+                </div>
+    
+                <div class="block-right2">
+                    <input type="number" id="chislo" onblur="this.value=CheckAge(this.value)"><br>
+                    <input type="number" id="mes" onblur="this.value=CheckValue(this.value)"><br>
+                    <input type="number" id="god" onblur="this.value=CheckDate(this.value)"><br>
+                </div>
+            </section>
+                    
+            <button class="otstp" type="submit" onClick="hi();">Відправити</button>
+                        
+        </form>        
+    </header>        
+    </body>
+</html>
